@@ -1,4 +1,4 @@
-import projects from "../images/projects/index";
+import projects from "../images/showcase/index";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
 function CarouselBillboard({ activeIndex, prevSlide, nextSlide }) {

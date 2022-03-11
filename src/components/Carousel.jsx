@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CarouselBillboard from "./CarouselBillboard";
 import CarouselSlide from "./CarouselSlide";
-import ProjectImages from "../images/projects/index";
+import ProjectImages from "../images/showcase/index";
 
 function Carousel() {
     const [activeIndex, setSlideIndex] = useState(0);
