@@ -1,4 +1,4 @@
-import LogoImage from "../images/logos/logo-background.png";
+import LogoImage from "../images/logos/background-logo.png";
 import Video from "../test-video.mp4";
 
 function Jumbotron() {
