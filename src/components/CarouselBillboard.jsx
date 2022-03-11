@@ -1,7 +1,12 @@
 import projects from "../images/showcase/index";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
-function CarouselBillboard({ activeIndex, prevSlide, nextSlide }) {
+function CarouselBillboard({
+    activeIndex,
+    setSlideIndex,
+    prevSlide,
+    nextSlide,
+}) {
     return (
         <div className="billboard-container">
             <div className="nav-container">
@@ -15,6 +20,7 @@ function CarouselBillboard({ activeIndex, prevSlide, nextSlide }) {
                     {projects.map((item, index) => {
                         return (
                             <button
+                                onClick={() => setSlideIndex(index)}
                                 key={index}
                                 className={`nav-indicator ${
                                     activeIndex === index

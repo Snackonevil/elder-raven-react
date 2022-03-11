@@ -39,6 +39,7 @@ function Carousel() {
                 activeIndex={activeIndex}
                 nextSlide={nextSlide}
                 prevSlide={prevSlide}
+                setSlideIndex={setSlideIndex}
             />
         </section>
     );
