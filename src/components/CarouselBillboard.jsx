@@ -1,10 +1,13 @@
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
-function CarouselBillboard() {
+function CarouselBillboard({ prevSlide, nextSlide }) {
     return (
         <div className="billboard-container">
             <div className="nav-container">
-                <button className="carousel-nav-left">
+                <button
+                    className="carousel-nav-left"
+                    onClick={e => prevSlide()}
+                >
                     <FaCaretLeft />
                 </button>
                 <div className="carousel-nav">
@@ -12,7 +15,10 @@ function CarouselBillboard() {
                     <button className="nav-indicator"></button>
                     <button className="nav-indicator"></button>
                 </div>
-                <button className="carousel-nav-right">
+                <button
+                    className="carousel-nav-right"
+                    onClick={e => nextSlide()}
+                >
                     <FaCaretRight />
                 </button>
             </div>

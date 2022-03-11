@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../images/logos/nav-logo.png";
 import { FaInstagram } from "react-icons/fa";
-import React from "react";
 
 function Navbar() {
     return (
