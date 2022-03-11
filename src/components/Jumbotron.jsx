@@ -4,6 +4,7 @@ import Video from "../test-video.mp4";
 function Jumbotron() {
     return (
         <>
+            {/* {window.innerHeight <= window.scrollY ? <Navbar /> : ""} */}
             <video autoPlay muted loop id="background-vid">
                 <source src={Video} type="video/mp4" alt="video" />
             </video>
