@@ -13,6 +13,7 @@ function Footer() {
                 <Link to="/contact">CONTACT</Link>
                 <a
                     href="https://www.instagram.com/elder_raven_leatherworking/"
+                    rel="noreferrer"
                     target="_blank"
                 >
                     INSTAGRAM
