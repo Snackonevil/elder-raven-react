@@ -5,11 +5,11 @@ import { FaInstagram } from "react-icons/fa";
 function Navbar() {
     return (
         <nav id="main-nav">
-            <Link to="/">
-                <div className="logo">
+            <div className="logo">
+                <Link to="/">
                     <img src={Logo} alt="elder-raven-logo-nav" />
-                </div>
-            </Link>
+                </Link>
+            </div>
             <ul className="nav-links">
                 <li>
                     <Link to="/about">ABOUT</Link>

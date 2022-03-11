@@ -1,7 +1,7 @@
 function CarouselSlide({ projectImage }) {
     return (
         <div className="carousel-slide">
-            <img src={projectImage} alt="project-image" />
+            <img src={projectImage} alt="project" />
         </div>
     );
 }
