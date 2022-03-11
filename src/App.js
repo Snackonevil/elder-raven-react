@@ -2,12 +2,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import "./style.css";
+import Navbar from "./components/Navbar";
+import "./App.css";
 
 function App() {
     return (
         <>
             <Router>
+                {/* {window.innerHeight <= window.scrollY ? <Navbar /> : ""} */}
+                <Navbar />
                 <h1>Elder Raven</h1>
                 <Routes>
                     <Route path="/" element={<Home />} />
