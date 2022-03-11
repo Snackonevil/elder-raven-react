@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import { DeviceWidth } from "../App";
+import { WindowWidthContext } from "../App";
 import Navbar from "../components/Navbar";
 
 function About() {
-    const test = useContext(DeviceWidth);
+    const deviceType = useContext(WindowWidthContext);
 
     return (
         <>
-            <Navbar />
-            <h1>{test}</h1>
+            {deviceType === "tablet" ? <Navbar /> : ""}
+            <h1>{deviceType}</h1>
         </>
     );
 }

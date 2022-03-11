@@ -6,17 +6,17 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
 
-export const DeviceWidth = createContext();
+export const WindowWidthContext = createContext();
 
 function App() {
     const [deviceType, setDeviceType] = useState();
 
     const handleWidth = () => {
         window.innerWidth <= 600
-            ? console.log("mobile")
-            : window.innerWidth > 600 && window.innerWidth <= 1000
-            ? console.log("tablet")
-            : console.log("Desktop");
+            ? setDeviceType("mobile")
+            : window.innerWidth > 600 && window.innerWidth <= 1200
+            ? setDeviceType("tablet")
+            : setDeviceType("desktop");
     };
 
     useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
 
     return (
         <>
-            <DeviceWidth.Provider value={deviceType}>
+            <WindowWidthContext.Provider value={deviceType}>
                 <Router>
                     <Routes>
                         <Route path="/" element={<Home />} />
@@ -34,7 +34,7 @@ function App() {
                     </Routes>
                     <Footer />
                 </Router>
-            </DeviceWidth.Provider>
+            </WindowWidthContext.Provider>
         </>
     );
 }
