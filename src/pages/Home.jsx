@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
 import Carousel from "../components/Carousel";
 import Work from "../components/Work";
-import Navbar from "../components/Navbar";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
 
 function Home() {
     const [navbarState, setNavbarState] = useState(false);

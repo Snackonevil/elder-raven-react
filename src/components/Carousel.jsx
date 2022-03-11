@@ -26,6 +26,7 @@ function Carousel() {
                         transform: `translateX(-${
                             (100 / ProjectImages.length) * activeIndex
                         }%)`,
+                        width: `${100 * ProjectImages.length}%`,
                     }}
                 >
                     {ProjectImages.map((image, index) => {
