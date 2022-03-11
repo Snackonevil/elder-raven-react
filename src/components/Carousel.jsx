@@ -35,7 +35,11 @@ function Carousel() {
                     })}
                 </div>
             </div>
-            <CarouselBillboard nextSlide={nextSlide} prevSlide={prevSlide} />
+            <CarouselBillboard
+                activeIndex={activeIndex}
+                nextSlide={nextSlide}
+                prevSlide={prevSlide}
+            />
         </section>
     );
 }

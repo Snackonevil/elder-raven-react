@@ -1,6 +1,7 @@
+import projects from "../images/projects/index";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
-function CarouselBillboard({ prevSlide, nextSlide }) {
+function CarouselBillboard({ activeIndex, prevSlide, nextSlide }) {
     return (
         <div className="billboard-container">
             <div className="nav-container">
@@ -11,9 +12,17 @@ function CarouselBillboard({ prevSlide, nextSlide }) {
                     <FaCaretLeft />
                 </button>
                 <div className="carousel-nav">
-                    <button className="nav-indicator current-indicator"></button>
-                    <button className="nav-indicator"></button>
-                    <button className="nav-indicator"></button>
+                    {projects.map((item, index) => {
+                        return (
+                            <button
+                                className={`nav-indicator ${
+                                    activeIndex === index
+                                        ? "current-indicator"
+                                        : ""
+                                }`}
+                            ></button>
+                        );
+                    })}
                 </div>
                 <button
                     className="carousel-nav-right"
