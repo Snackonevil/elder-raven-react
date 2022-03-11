@@ -1,13 +1,16 @@
 import LogoImage from "../images/logos/background-logo.png";
 import Video from "../test-video.mp4";
 
-function Jumbotron() {
+function Jumbotron({ navbarState }) {
     return (
         <>
-            {/* {window.innerHeight <= window.scrollY ? <Navbar /> : ""} */}
-            <video autoPlay muted loop id="background-vid">
-                <source src={Video} type="video/mp4" alt="video" />
-            </video>
+            {!navbarState ? (
+                <video autoPlay muted loop id="background-vid">
+                    <source src={Video} type="video/mp4" alt="video" />
+                </video>
+            ) : (
+                ""
+            )}
             <section className="jumbotron">
                 <img className="logo" src={LogoImage} alt="logo-background" />
             </section>

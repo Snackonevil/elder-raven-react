@@ -15,6 +15,7 @@ function CarouselBillboard({ activeIndex, prevSlide, nextSlide }) {
                     {projects.map((item, index) => {
                         return (
                             <button
+                                key={index}
                                 className={`nav-indicator ${
                                     activeIndex === index
                                         ? "current-indicator"

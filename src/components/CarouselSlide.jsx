@@ -1,7 +1,7 @@
-function CarouselSlide({ key, projectImage }) {
+function CarouselSlide({ projectImage }) {
     return (
         <div className="carousel-slide">
-            <img src={projectImage} alt={`project-${key}`} />
+            <img src={projectImage} alt="project-image" />
         </div>
     );
 }

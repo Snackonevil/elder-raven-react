@@ -2,10 +2,10 @@ import Jumbotron from "../components/Jumbotron";
 import Carousel from "../components/Carousel";
 import Work from "../components/Work";
 
-function Home() {
+function Home({ navbarState }) {
     return (
         <>
-            <Jumbotron />
+            <Jumbotron navbarState={navbarState} />
             <Carousel />
             <Work />
         </>
