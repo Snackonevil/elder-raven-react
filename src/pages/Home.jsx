@@ -5,6 +5,7 @@ import Jumbotron from "../components/Jumbotron";
 import Carousel from "../components/Carousel";
 import Work from "../components/Work";
 import WindowWidthContext from "../context/WindowWidthContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Home() {
     const deviceWidth = useContext(WindowWidthContext);
