@@ -1,14 +1,19 @@
 const ProductImages1 = [
+    require("./carousel-test1.jpg"),
     require("./carousel-test2.jpg"),
     require("./carousel-test3.jpg"),
-    require("./carousel-test1.jpg"),
 ];
 const ProductImages2 = [
+    require("./carousel-test2.jpg"),
     require("./carousel-test1.jpg"),
     require("./carousel-test3.jpg"),
-    require("./carousel-test2.jpg"),
 ];
 const ProductImages3 = [
+    require("./carousel-test3.jpg"),
+    require("./carousel-test2.jpg"),
+    require("./carousel-test1.jpg"),
+];
+const ProductImages4 = [
     require("./carousel-test2.jpg"),
     require("./carousel-test1.jpg"),
     require("./carousel-test3.jpg"),
@@ -55,7 +60,7 @@ const Products = [
         id: 4,
         product_name: "PRODUCT FOUR",
         second_line: "Second Line",
-        images: ProductImages1,
+        images: ProductImages4,
         description: `Lorem ipsum, dolor sit amet consectetur adipisicing
         elit. A quo corporis voluptatem officia nostrum illo
         inventore similique dolorum, cupiditate sed quos

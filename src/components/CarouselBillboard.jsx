@@ -21,7 +21,7 @@ function CarouselBillboard({
                         return (
                             <button
                                 onClick={() => setSlideIndex(index)}
-                                key={index}
+                                key={`indicator-${index}`}
                                 className={`nav-indicator ${
                                     activeIndex === index
                                         ? "current-indicator"

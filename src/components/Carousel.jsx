@@ -31,7 +31,10 @@ function Carousel() {
                 >
                     {ProjectImages.map((image, index) => {
                         return (
-                            <CarouselSlide key={index} projectImage={image} />
+                            <CarouselSlide
+                                key={`a${index}`}
+                                projectImage={image}
+                            />
                         );
                     })}
                 </div>

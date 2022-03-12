@@ -1,31 +1,41 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { ProductContext } from "../context/ProductContext";
 
 function Product({ product }) {
-    const [toggle, setToggle] = useState(false);
-
+    const { productState, handleProduct } = useContext(ProductContext);
+    // const [productState.toggle, setproductState.Toggle] = useState(false);
+    const { id, product_name, second_line, description, images } = product;
     return (
         <div
-            id={`project-${product.id}`}
-            className="project inactive-project"
-            onClick={() => setToggle(!toggle)}
+            id={`project-${id}`}
+            className={`project ${
+                productState !== id ? "inactive-project" : "active-project"
+            }`}
+            onClick={() => handleProduct(id)}
         >
             <div className="project-carousel">
                 <div className="project-carousel-track">
-                    {product.images.map((image, index) => {
+                    <img
+                        key={`${product_name}${id}`}
+                        className="picture"
+                        src={images[0]}
+                        alt="product"
+                    />
+                    {/* {images.map(image => {
                         return (
                             <img
-                                key={index}
+                                key={`${product_name}${id}`}
                                 className="picture"
                                 src={image}
                                 alt="product"
                             />
                         );
-                    })}
+                    })} */}
                 </div>
                 <div
                     className={`project-carousel-btns ${
-                        !toggle ? "hidden" : ""
+                        productState !== id ? "hidden" : ""
                     }`}
                 >
                     <button className="project-left">
@@ -38,11 +48,15 @@ function Product({ product }) {
             </div>
             <div className="overlay">
                 <div className="project-name">
-                    <h1>{product.product_name}</h1>
-                    <h1>{product.second_line}</h1>
+                    <h1>{product_name}</h1>
+                    <h1>{second_line}</h1>
                 </div>
-                <p className={`project-description ${!toggle ? "hidden" : ""}`}>
-                    {product.description}
+                <p
+                    className={`project-description ${
+                        productState !== id ? "hidden" : ""
+                    }`}
+                >
+                    {description}
                 </p>
             </div>
         </div>

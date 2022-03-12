@@ -2,13 +2,20 @@ import { createContext, useState } from "react";
 
 export const ProductContext = createContext();
 
-const ProductContextProvider = ({ children }) => {
-    const [productState, setProductState] = useState({});
+export const ProductContextProvider = ({ children }) => {
+    const [productState, setProductState] = useState();
+
+    function handleProduct(id) {
+        if (productState === id) {
+            setProductState(null);
+        } else {
+            setProductState(id);
+        }
+    }
+
     return (
-        <ProductContext.Provider value={(productState, setProductState)}>
+        <ProductContext.Provider value={{ productState, handleProduct }}>
             {children}
         </ProductContext.Provider>
     );
 };
-
-export default ProductContextProvider;
