@@ -38,16 +38,31 @@ function Product({ product }) {
                         productState !== id ? "hidden" : ""
                     }`}
                 >
-                    <button className="project-left">
+                    <button
+                        className="project-left"
+                        onClick={() => console.log("click left")}
+                    >
                         <FaChevronLeft />
                     </button>
-                    <button className="project-right">
+                    <button
+                        className="project-right"
+                        onClick={() => console.log("click right")}
+                    >
                         <FaChevronRight />
                     </button>
                 </div>
             </div>
-            <div className="overlay">
-                <div className="project-name">
+            <div
+                className="overlay"
+                style={{
+                    height: productState === id ? "25%" : "",
+                    opacity: productState === id ? "1" : "",
+                }}
+            >
+                <div
+                    className="project-name"
+                    style={{ width: productState === id ? "50%" : "" }}
+                >
                     <h1>{product_name}</h1>
                     <h1>{second_line}</h1>
                 </div>

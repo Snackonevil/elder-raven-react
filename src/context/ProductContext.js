@@ -7,7 +7,8 @@ export const ProductContextProvider = ({ children }) => {
 
     function handleProduct(id) {
         if (productState === id) {
-            setProductState(null);
+            // setProductState(null);
+            return;
         } else {
             setProductState(id);
         }

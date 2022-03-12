@@ -12,7 +12,7 @@ function CarouselBillboard({
             <div className="nav-container">
                 <button
                     className="carousel-nav-left"
-                    onClick={e => prevSlide()}
+                    onClick={() => prevSlide()}
                 >
                     <FaCaretLeft />
                 </button>
@@ -33,7 +33,7 @@ function CarouselBillboard({
                 </div>
                 <button
                     className="carousel-nav-right"
-                    onClick={e => nextSlide()}
+                    onClick={() => nextSlide()}
                 >
                     <FaCaretRight />
                 </button>
