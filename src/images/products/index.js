@@ -16,6 +16,7 @@ const ProductImages3 = [
 
 const Products = [
     {
+        id: 1,
         product_name: "PRODUCT ONE",
         second_line: "Second Line",
         images: ProductImages1,
@@ -27,6 +28,7 @@ const Products = [
         assumenda natus omnis molestias enim?`,
     },
     {
+        id: 2,
         product_name: "PRODUCT TWO",
         second_line: "Second Line",
         images: ProductImages2,
@@ -38,6 +40,7 @@ const Products = [
         assumenda natus omnis molestias enim?`,
     },
     {
+        id: 3,
         product_name: "PRODUCT THREE",
         second_line: "Second Line",
         images: ProductImages3,
@@ -49,6 +52,7 @@ const Products = [
         assumenda natus omnis molestias enim?`,
     },
     {
+        id: 4,
         product_name: "PRODUCT FOUR",
         second_line: "Second Line",
         images: ProductImages1,

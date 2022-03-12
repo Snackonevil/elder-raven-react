@@ -1,13 +1,15 @@
-import React from "react";
+import { useState } from "react";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 function Product({ product }) {
-    let toggle = false;
-    const toggleProject = target => {
-        toggle = !toggle;
-        console.log(toggle);
-    };
+    const [toggle, setToggle] = useState(false);
+
     return (
-        <div id="project-1" className="project inactive-project">
+        <div
+            id={`project-${product.id}`}
+            className="project inactive-project"
+            onClick={() => setToggle(!toggle)}
+        >
             <div className="project-carousel">
                 <div className="project-carousel-track">
                     {product.images.map((image, index) => {
@@ -21,24 +23,25 @@ function Product({ product }) {
                         );
                     })}
                 </div>
-                <div className="project-carousel-btns hidden">
+                <div
+                    className={`project-carousel-btns ${
+                        !toggle ? "hidden" : ""
+                    }`}
+                >
                     <button className="project-left">
-                        <i className="fa-solid fa-chevron-left"></i>
+                        <FaChevronLeft />
                     </button>
                     <button className="project-right">
-                        <i className="fa-solid fa-chevron-right"></i>
+                        <FaChevronRight />
                     </button>
                 </div>
             </div>
-            <div
-                className="overlay"
-                onClick={() => toggleProject(product.product_name)}
-            >
+            <div className="overlay">
                 <div className="project-name">
                     <h1>{product.product_name}</h1>
                     <h1>{product.second_line}</h1>
                 </div>
-                <p className="project-description hidden">
+                <p className={`project-description ${!toggle ? "hidden" : ""}`}>
                     {product.description}
                 </p>
             </div>
