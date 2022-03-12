@@ -5,17 +5,17 @@ const ProductImages1 = [
 ];
 const ProductImages2 = [
     require("./carousel-test2.jpg"),
-    require("./carousel-test1.jpg"),
     require("./carousel-test3.jpg"),
+    require("./carousel-test1.jpg"),
 ];
 const ProductImages3 = [
     require("./carousel-test3.jpg"),
-    require("./carousel-test2.jpg"),
     require("./carousel-test1.jpg"),
+    require("./carousel-test2.jpg"),
 ];
 const ProductImages4 = [
-    require("./carousel-test2.jpg"),
     require("./carousel-test1.jpg"),
+    require("./carousel-test2.jpg"),
     require("./carousel-test3.jpg"),
 ];
 
