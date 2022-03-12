@@ -5,7 +5,7 @@ import { ProductContextProvider } from "../context/ProductContext";
 function Work() {
     return (
         <ProductContextProvider>
-            <section className="project-section">
+            <section className="product-section">
                 {products.map((product, index) => (
                     <Product key={product.product_name} product={product} />
                 ))}

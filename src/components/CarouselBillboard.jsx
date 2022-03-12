@@ -1,4 +1,4 @@
-import projects from "../images/showcase/index";
+import products from "../images/showcase/index";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
 function CarouselBillboard({
@@ -17,7 +17,7 @@ function CarouselBillboard({
                     <FaCaretLeft />
                 </button>
                 <div className="carousel-nav">
-                    {projects.map((item, index) => {
+                    {products.map((item, index) => {
                         return (
                             <button
                                 onClick={() => setSlideIndex(index)}
@@ -38,13 +38,13 @@ function CarouselBillboard({
                     <FaCaretRight />
                 </button>
             </div>
-            <h4 className="latest-project">LATEST PROJECT:</h4>
-            <div className="latest-project-content">
-                <div className="latest-project-header">
-                    <h2>PROJECT NAME</h2>
+            <h4 className="latest-product">LATEST product:</h4>
+            <div className="latest-product-content">
+                <div className="latest-product-header">
+                    <h2>PRODUCT NAME</h2>
                     <h2>SECOND LINE</h2>
                 </div>
-                <div className="latest-project-description">
+                <div className="latest-product-description">
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Totam qui et quas velit commodi cum ullam iure,
