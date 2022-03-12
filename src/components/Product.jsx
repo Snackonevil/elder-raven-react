@@ -23,7 +23,7 @@ function Product({ product }) {
             >
                 <div
                     className="product-name"
-                    style={{ width: productState === id ? "50%" : "" }}
+                    style={{ width: productState === id ? "100%" : "" }}
                 >
                     <h1>{product_name}</h1>
                     <h1>{second_line}</h1>

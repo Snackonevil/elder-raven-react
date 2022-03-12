@@ -3,7 +3,7 @@ import { ProductContext } from "../context/ProductContext";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 export default function ProductCarousel({ product }) {
-    const { productState, handleProduct } = useContext(ProductContext);
+    const { productState } = useContext(ProductContext);
     const [activeIndex, setSlideIndex] = useState(0);
     const { id, product_name, images } = product;
 
@@ -23,7 +23,7 @@ export default function ProductCarousel({ product }) {
             <div
                 className="product-carousel-track"
                 style={{
-                    width: `${100 * images.length}%`,
+                    width: `${100}%`,
                     transform: `translateX(-${100 * activeIndex}%)`,
                 }}
             >
