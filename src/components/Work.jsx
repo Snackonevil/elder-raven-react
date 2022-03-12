@@ -3,6 +3,7 @@ import Product from "./Product";
 function Work() {
     return (
         <section className="project-section">
+            <Product />
             <div id="project-1" className="project inactive-project">
                 <div className="project-carousel">
                     <div className="project-carousel-track">
