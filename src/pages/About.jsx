@@ -8,7 +8,11 @@ function About() {
 
     return (
         <>
-            {deviceType === "mobile" ? <MobileNavbar /> : <Navbar />}
+            {deviceType === "mobile" || deviceType === "tablet" ? (
+                <MobileNavbar />
+            ) : (
+                <Navbar />
+            )}
             <h1>About</h1>
             <h1>{deviceType}</h1>
         </>

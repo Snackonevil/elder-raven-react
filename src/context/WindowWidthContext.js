@@ -8,7 +8,7 @@ export const WindowWidthProvider = ({ children }) => {
     const handleWidth = () => {
         window.innerWidth <= 600
             ? setDeviceType("mobile")
-            : window.innerWidth > 600 && window.innerWidth <= 1200
+            : window.innerWidth > 600 && window.innerWidth <= 1280
             ? setDeviceType("tablet")
             : setDeviceType("desktop");
     };

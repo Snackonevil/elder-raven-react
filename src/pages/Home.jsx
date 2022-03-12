@@ -20,9 +20,11 @@ function Home() {
 
     return (
         <>
-            {navbarState && deviceWidth !== "mobile" ? (
+            {navbarState &&
+            deviceWidth !== "mobile" &&
+            deviceWidth !== "tablet" ? (
                 <Navbar />
-            ) : deviceWidth === "mobile" ? (
+            ) : deviceWidth === "mobile" || deviceWidth === "tablet" ? (
                 <MobileNavbar />
             ) : (
                 ""
