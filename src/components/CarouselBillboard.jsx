@@ -38,7 +38,7 @@ function CarouselBillboard({
                     <FaCaretRight />
                 </button>
             </div>
-            <h4 className="latest-product">LATEST product:</h4>
+            <h4 className="latest-product">LATEST PROJECT:</h4>
             <div className="latest-product-content">
                 <div className="latest-product-header">
                     <h2>PRODUCT NAME</h2>
