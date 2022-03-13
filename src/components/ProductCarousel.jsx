@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import ProductSlide from "./ProductSlide";
 
 export default function ProductCarousel({ product }) {
     const { productState } = useContext(ProductContext);
@@ -29,11 +30,9 @@ export default function ProductCarousel({ product }) {
             >
                 {images.map((image, index) => {
                     return (
-                        <img
+                        <ProductSlide
+                            image={image}
                             key={product_name + index}
-                            className="picture"
-                            src={image}
-                            alt="product"
                         />
                     );
                 })}
