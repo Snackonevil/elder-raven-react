@@ -7,7 +7,7 @@ function Work() {
         <ProductContextProvider>
             <section className="product-section">
                 {products.map((product, index) => (
-                    <Product key={product.product_name} product={product} />
+                    <Product key={index} product={product} />
                 ))}
             </section>
         </ProductContextProvider>
